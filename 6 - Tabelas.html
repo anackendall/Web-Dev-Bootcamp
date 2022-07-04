@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="ustf-8">
+	<title>Tabelas</title>
+</head>
+
+<body>
+	<a href="7 - Links.html">Voltar para o index</a>
+	<h1>Tabelas</h1>
+	
+	<p>
+		<h2>Elementos essenciais da tabela</h2>
+		tr = linha
+		<br>
+		td = celula dentro da tr
+		<br>
+		obs: th = celula header
+	</p><br>
+
+	<p>
+		<h2>Elementos semânticos</h2>
+		Separa as partes da tabela para melhor organização e navegação<br>
+		thead= cabeçalho da tabela<br>
+		tbody= corpo da tabela<br>
+		tfoot= rodapé da tabela
+	</p><br>
+
+	<h2>Tabela</h2>
+	<table>
+		<thead> <tr> <th>-</th>        <th>coluna 1</th>  <th>coluna 2</th> <th>coluna 3</th></tr></thead>
+		<tbody>
+				<tr> <th>linha a</th>  <td>1a</td>        <td>2a</td>       <td>3a</td> </tr>
+				<tr> <th>linha b</th>  <td>1b</td>        <td>2b</td>       <td>3b</td> </tr>
+				<tr> <th>linha c</th>  <td>1c</td>        <td>2c</td>       <td>3c</td> </tr>
+		</tbody>
+				escrevendo sem fechar a table
+	</table>
+
+	<p>depois da table</p><br>
+
+	<p>
+		<h2>Colspan e Rowspan</h2>
+
+		Rowspan= Quantas linhas a celula ocupa 
+		Colspan = Quantas colunas a celula ocupa
+
+		<table>
+			<thead> <tr> <th> - </th> <th rowspan="2">animal</th> <th colspan="2">average mass</th> <th rowspan="2">flighted</th> </tr> 
+					<tr> <th>Kg</th> <th>Lb</th></tr>
+			</thead>
+			<tbody> 
+					<tr> <th> 1 </th> <td>chicken</td> <td>104</td> <td>230</td> <td>No</td></tr>
+			</tbody>
+		</table>
+	</p>
+</body>
+</html>

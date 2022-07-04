@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="uft-8">
+		<title>Formulários</title>
+	</head>
+
+	<body>
+		<p>
+			<b>"<"form</b> <br>
+			action= "pagina pra onde vai ser enviado"<br>
+			method= "post" ou "get"<br>
+			(post: encripta e envia, get: só envia)
+			">"<br>
+			<b>"<"/form></b>
+		</p>
+
+		<p>
+			<h3>tags:</h3>
+			<p>
+				<b>input:</b><br>
+					coleta dados informados pelo usuário<br>
+					<b>type:</b> tipo de input<br>
+					<b>name:</b> nome da variável que vai armazenar <br>
+					<b>placeholder:</b> o que aparece na caixinha <br>
+			</p> 
+		</p>
+
+
+		<form action="processa.php" method="post">
+			
+			<label>Text: </label>
+			<input type="text" name="texto1" placeholder="login">
+			<br>
+
+			<label>Password: </label>
+			<input type="password" name="texto2 " placeholder="senha">
+			<br>
+
+			<label>Hidden: </label>
+			<input type="hidden" name="texto3" value = "mensagem oculta">
+		</form>
+
+	</body>
+</html>
