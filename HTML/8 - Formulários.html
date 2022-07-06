@@ -6,6 +6,8 @@
 	</head>
 
 	<body>
+		<h1>Forms</h1>
+		Takes input from the user
 		<p>
 			<b>"<"form</b> <br>
 			action= "pagina pra onde vai ser enviado"<br>
@@ -16,30 +18,98 @@
 		</p>
 
 		<p>
-			<h3>tags:</h3>
+			<h3>tipos de input</h3>
 			<p>
 				<b>input:</b><br>
 					coleta dados informados pelo usuário<br>
 					<b>type:</b> tipo de input<br>
-					<b>name:</b> nome da variável que vai armazenar <br>
+					<b>name:</b> variável que armazena o que o usuário vai inserir
 					<b>placeholder:</b> o que aparece na caixinha <br>
-			</p> 
+					<b>id:</b> a label (ver abaixo)
+				</p> 
 		</p>
 
-
-		<form action="processa.php" method="post">
+		<p>
+			<h3>labels</h3>
+			identifica o input para melhor organização e acessibilidade
 			
-			<label>Text: </label>
-			<input type="text" name="texto1" placeholder="login">
+			<p>
+				<b>&#60; label</b><br>
+				<b>for=</b> variavel que identifica, deve ser única para cada input (será a id no input)<br>
+				<b>&#62;</b><br>
+				<b>label que o usuário vai ver</b><br>
+				<b>&#60;label&#62;</b>
+			</p>
+		</p>
+
+		<form action="/page">
+			<label for="nome">nome</label>
+			<input type="text" name="nome" placeholder="nome" id="nome">
 			<br>
 
-			<label>Password: </label>
-			<input type="password" name="texto2 " placeholder="senha">
+			<label for="email">email</label>
+			<input type="email" name="email" placeholder="email" id="email"> 
 			<br>
 
-			<label>Hidden: </label>
-			<input type="hidden" name="texto3" value = "mensagem oculta">
+			<label for="senha">senha</label>
+			<input type="password" name="senha" placeholder="senha" id="senha"> 
+			<br>
+
+			<label for="data">data de nascimento</label>
+			<input type="date" name="birth_date" id="data"> 
+			<br>
+
+			<label for="gatos">gatos</label>
+			<input type="number" name="num_gatos" placeholder="numero de gatos" id="gatos"> 
+			<br>
+
+			<label for="cor">cor favorita</label>
+			<input type="color" name="color" placeholder="escolha uma cor" id="cor">
+			<br>
+
+			<button>Enviar</button>
 		</form>
+
+		<p>
+			<h3>Botões</h3>
+			<p>
+				dentro do form: redireciona pra página em action
+				<br>
+				obs: mesmo sem o botão, a tecla enter envia o formulário 
+			</p>
+
+			<button>Fora do form ele não faz nada</button>
+		</p>
+
+		<hr>
+		<h1>Pesquisando por urls conhecidas</h1>
+		
+		<p>
+			<h3>Pesquisando no reddit</h3>
+			
+			<form action="https://reddit.com/search">
+				<input type="text" name="q">
+				<button>Search reddit</button>
+			</form>
+		</p>
+
+		<p>
+			<h3>Pesquisando no google</h3>
+			
+			<form action="https://google.com/search">
+				<input type="text" name="q">
+				<button>Search google</button>
+			</form>
+		</p>
+
+		<p>
+			<h3>Pesquisando no youtube</h3>
+			
+			<form action="https://youtube.com/results?">
+				<input type="text" name="search_query">
+				<button>Search youtube</button>
+			</form>
+		</p>
 
 	</body>
 </html>

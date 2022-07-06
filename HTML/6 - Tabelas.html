@@ -42,16 +42,18 @@
 
 	<p>
 		<h2>Colspan e Rowspan</h2>
-
-		Rowspan= Quantas linhas a celula ocupa 
-		Colspan = Quantas colunas a celula ocupa
+		<p>
+		Rowspan= Quantas linhas a celula ocupa "altura da celula"<br>
+		Colspan= Quantas colunas a celula ocupa "largura da celula"
+		</p>
 
 		<table>
-			<thead> <tr> <th> - </th> <th rowspan="2">animal</th> <th colspan="2">average mass</th> <th rowspan="2">flighted</th> </tr> 
-					<tr> <th>Kg</th> <th>Lb</th></tr>
+			<thead> <tr> <th rowspan="2"> - </th> <th rowspan="2">animal</th> <th colspan="2">average mass</th> <th rowspan="2">flighted</th> </tr> 
+					<tr> 													  <th>Kg</th> <th>Lb</th>										  </tr>
 			</thead>
 			<tbody> 
 					<tr> <th> 1 </th> <td>chicken</td> <td>104</td> <td>230</td> <td>No</td></tr>
+					<tr> <th> 2 </th> <td>chicken</td> <td>104</td> <td>230</td> <td>No</td></tr>
 			</tbody>
 		</table>
 	</p>
