@@ -43,17 +43,19 @@
 		</p>
 
 		<form action="/page">
-			<label for="nome">nome</label>
-			<input type="text" name="nome" placeholder="nome" id="nome">
-			<br>
+			<p>
+				<label for="nome">nome</label>
+				<input type="text" name="nome" placeholder="nome" id="nome">
+				<br>
 
-			<label for="email">email</label>
-			<input type="email" name="email" placeholder="email" id="email"> 
-			<br>
+				<label for="email">email</label>
+				<input type="email" name="email" placeholder="email" id="email"> 
+				<br>
 
-			<label for="senha">senha</label>
-			<input type="password" name="senha" placeholder="senha" id="senha"> 
-			<br>
+				<label for="senha">senha</label>
+				<input type="password" name="senha" placeholder="senha" id="senha"> 
+				<br>
+			</p>
 
 			<label for="data">data de nascimento</label>
 			<input type="date" name="birth_date" id="data"> 
@@ -66,6 +68,23 @@
 			<label for="cor">cor favorita</label>
 			<input type="color" name="color" placeholder="escolha uma cor" id="cor">
 			<br>
+
+			<input type="checkbox" name="agree" id="checkbox">
+			<label for="checkbox">I agree that ana is awesome</label>
+			<br>
+
+			<p>
+				Formas de pagamento:<br>
+				<input type="radio" id="credit" name="payment" value="credit">
+				<label for="credit">credit card</label>
+				<br>
+				<input type="radio" id="debit" name="payment" value="debit">
+				<label for="debit">debit card</label>
+				<br>
+				<input type="radio" id="cash" name="payment" value="cash">
+				<label for="cash">cash</label>
+				<br>
+			</p>
 
 			<button>Enviar</button>
 		</form>
