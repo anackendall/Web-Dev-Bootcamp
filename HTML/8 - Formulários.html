@@ -18,12 +18,12 @@
 		</p>
 
 		<p>
-			<h3>tipos de input</h3>
+			<h2>Tipos de input</h2>
 			<p>
 				<b>input:</b><br>
 					coleta dados informados pelo usuário<br>
 					<b>type:</b> tipo de input<br>
-					<b>name:</b> variável que armazena o que o usuário vai inserir
+					<b>name:</b> variável que armazena o que o usuário vai inserir<br>
 					<b>placeholder:</b> o que aparece na caixinha <br>
 					<b>id:</b> a label (ver abaixo)
 				</p> 
@@ -34,9 +34,7 @@
 			identifica o input para melhor organização e acessibilidade
 			
 			<p>
-				<b>&#60; label</b><br>
-				<b>for=</b> variavel que identifica, deve ser única para cada input (será a id no input)<br>
-				<b>&#62;</b><br>
+				<b>&#60; label</b> for= variavel que identifica, deve ser única para cada input (será a id no input) <b>&#62;</b><br>
 				<b>label que o usuário vai ver</b><br>
 				<b>&#60;label&#62;</b>
 			</p>
@@ -44,6 +42,8 @@
 
 		<form action="/page">
 			<p>
+				<h3>Input: caixas de texto</h3>
+
 				<label for="nome">nome</label>
 				<input type="text" name="nome" placeholder="nome" id="nome">
 				<br>
@@ -55,25 +55,56 @@
 				<label for="senha">senha</label>
 				<input type="password" name="senha" placeholder="senha" id="senha"> 
 				<br>
+
+				<h4>Text area</h4>
+				<label for="obs">Observations: </label>
+				<br>
+				<textarea name="obs" id="obs" cols="30" rows="10"></textarea>
 			</p>
 
-			<label for="data">data de nascimento</label>
-			<input type="date" name="birth_date" id="data"> 
-			<br>
+			<p>
+				<h3>Input: outros</h3>
 
-			<label for="gatos">gatos</label>
-			<input type="number" name="num_gatos" placeholder="numero de gatos" id="gatos"> 
-			<br>
+				<label for="data">data de nascimento</label>
+				<input type="date" name="birth_date" id="data"> 
+				<br>
 
-			<label for="cor">cor favorita</label>
-			<input type="color" name="color" placeholder="escolha uma cor" id="cor">
-			<br>
+				<label for="gatos">gatos</label>
+				<input type="number" name="num_gatos" placeholder="numero de gatos" id="gatos"> 
+				<br>
 
-			<input type="checkbox" name="agree" id="checkbox">
-			<label for="checkbox">I agree that ana is awesome</label>
-			<br>
+				<label for="cor">cor favorita</label>
+				<input type="color" name="color" placeholder="escolha uma cor" id="cor">
+				<br>
+
+				<input type="checkbox" name="agree" id="checkbox">
+				<label for="checkbox">I agree that ana is awesome</label>
+				<br>
+
+				<label for="slider">volume</label>
+				<input type="range" name="volume" id="Volume" min="0" max="100" step="5">
+			</p>
 
 			<p>
+				<h3>Input: marcar opção</h3>
+
+				<p>
+					<h4>Type: select</h4>
+					Permite que o usuário selecione uma opção da lista
+				</p>
+
+				<label for="meal" id="meal">What would you like to eat?</label>
+				<select name="Select meal" id="">
+					<option value="null" selected>Please chose an option</option>
+					<option value="chicken">Chicken</option>
+					<option value="fish">Fish</option>
+					<option value="veggie">Vegetarian</option>
+				</select>
+
+				<p>
+					<h4>Type: radio</h4>
+					Quando agrupadas (name="igual em todas"), o usuário só pode selecionar uma das opções
+				</p>
 				Formas de pagamento:<br>
 				<input type="radio" id="credit" name="payment" value="credit">
 				<label for="credit">credit card</label>
@@ -90,7 +121,7 @@
 		</form>
 
 		<p>
-			<h3>Botões</h3>
+			<h2>Botões</h2>
 			<p>
 				dentro do form: redireciona pra página em action
 				<br>
@@ -100,6 +131,38 @@
 			<button>Fora do form ele não faz nada</button>
 		</p>
 
+		<!-- -------------------------------------------------------------------------------------------------------------------------->
+		<hr>
+		<h2>Form Validations</h2>
+
+		<p>
+			<b>Serverside validation:</b> the data sent in the form is analysed by the server
+			to see if it is in a acceptable pattern (ex: phone numbers must be 10 digits, which are all numbers)
+			<br><br>
+			<b>Browser validation:</b> the browser checks the data format before the form is even submited,
+			as the user fills the form (ex: an error message that goes "the password must be at least 8 digits long")
+		</p>
+
+		<p>
+			<h3>Atributes:</h3>
+			<p>
+				<b>Required:</b> won't let the user submit the form uless they filled the input <br>
+					Syntax: &#60;input type=" " ... <b>required</b>&#62;
+			</p>
+		</p>
+
+		<h4>Validations Demo</h4>
+		<form action="/whatever">
+			<label for="fist_name">First name: </label>
+			<input type="text" name="fist_name" id="fist_name" required>
+
+			<Button>Submit</Button>
+		</form>
+		
+
+
+
+		<!-- -------------------------------------------------------------------------------------------------------------------------->
 		<hr>
 		<h1>Pesquisando por urls conhecidas</h1>
 		
