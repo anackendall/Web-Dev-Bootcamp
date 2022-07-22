@@ -146,16 +146,41 @@
 		<p>
 			<h3>Atributes:</h3>
 			<p>
-				<b>Required:</b> won't let the user submit the form uless they filled the input <br>
-					Syntax: &#60;input type=" " ... <b>required</b>&#62;
+				<div>
+					<b>Required:</b> won't let the user submit the form uless they filled the input <br>
+						Syntax: &#60;input type=" " ... <b>required</b>&#62;
+					<br><br>
+				</div>
+
+				<div>
+					<b>Input length: </b> constrols how big/small the user can make the data <br>
+					<b>	Text length: </b> minlength="" and maxlength="" <br>
+					<b>	Numeric length: </b> min="" and max="" <br>
+
+					Syntax: &#60;input type=" " ... <b> minlength=" " maxlength=" "</b>&#62;
+				</div>
+
+				<div>
+					<b>Pattern: </b>the type of input sets the expected format for the data 
+					(ex: if type="email", the expected input must have a "@")
+					<br>
+				</div> 
+			
 			</p>
 		</p>
 
 		<h4>Validations Demo</h4>
 		<form action="/whatever">
-			<label for="fist_name">First name: </label>
-			<input type="text" name="fist_name" id="fist_name" required>
 
+				<label for="fist_name">First name: </label>
+				<input type="text" name="fist_name" id="fist_name" minlength="02" maxlength="20" required>
+				<br>
+				<label for="age">Age</label>
+				<input type="number" id="age" min="0" max="120" required>
+				<br>
+				<label for="email">Email: </label>
+				<input type="email" id="email"  >
+				<br>
 			<Button>Submit</Button>
 		</form>
 		
